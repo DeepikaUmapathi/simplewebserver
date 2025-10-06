@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## Date:06/10/25
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the Device Specifications of your Laptop.
@@ -36,14 +36,7 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
-from http.server import HTTPServer, BaseHTTPRequestHandler
 
-content = """
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Top 5 Revenue Generating Software Companies</title>
-</head>
 <body>
     <table>
         <caption>Top 5 Revenue Generating Software Companies</caption>
@@ -81,23 +74,11 @@ content = """
 </body>
 </html>
 
-"""
-
-class MyHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("Request received")
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-
-server_address = ('', 8000)
-httpd = HTTPServer(server_address, MyHandler)
-print("My webserver is running...")
-httpd.serve_forever()
 
 
 ## OUTPUT:
+<img width="1914" height="1073" alt="Screenshot 2025-10-06 135742" src="https://github.com/user-attachments/assets/ec2e07b3-42aa-4eee-99de-29e5c1a522d8" />
+<img width="1913" height="1073" alt="Screenshot 2025-10-06 135849" src="https://github.com/user-attachments/assets/7cdce5b7-4a38-4863-a68d-c9e455779a79" />
 
 
 ## RESULT:
